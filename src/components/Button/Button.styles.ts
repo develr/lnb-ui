@@ -17,9 +17,9 @@ export const StyledButton = styled.button<ButtonProps>`
   gap: 10px;
 
   cursor: pointer;
-  background-color: ${({ variant }) =>
-    variant === "secondary" ? "gray" : "blue"};
-  color: white;
+  background-color: ${({ variant, theme }: any) =>
+    theme?.colors[variant]?.main};
+  color: ${({ variant, theme }: any) => theme?.colors[variant]?.contrast};
   transition: all 0.3s ease;
 
   &:hover {

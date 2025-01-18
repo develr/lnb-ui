@@ -2,8 +2,9 @@ export const lightTheme = {
   colors: {
     background: "#ffffff",
     text: "#000000",
-    primary: "#dc3545",
-    secondary: "#6C757D",
+    primary: { main: "#dc3545", contrast: "#fff" },
+    secondary: { main: "#6C757D", contrast: "#fff" },
+    // "#6C757D",
     border: "#DDDDDD",
   },
   spacing: (factor: number) => `${factor * 8}px`,

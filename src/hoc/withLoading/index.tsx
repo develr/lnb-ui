@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyledSpinner } from './spinner';
 import { useTheme } from '../../contexts/ThemeProvider';
+import { Theme } from '../../theme/defaultTheme';
 
 export interface WithLoadingProps {
     isLoading?: boolean;
@@ -10,14 +11,12 @@ export interface WithLoadingProps {
 }
 
 export interface SpinnerProps {
-  variant?: "primary" | "secondary";
+  theme: Theme,
+  variant: "primary" | "secondary";
 }
   
 
-function Spinner({ variant = "primary" }: SpinnerProps) {
-  const { theme } = useTheme();
-  
-  console.log(theme.colors[variant])
+function Spinner({ variant, theme }: SpinnerProps) {
   return (
     <StyledSpinner viewBox="0 0 50 50">
       <circle
@@ -27,7 +26,7 @@ function Spinner({ variant = "primary" }: SpinnerProps) {
         r="20"
         fill="none"
         strokeWidth="4"
-        stroke={theme.colors[variant]}
+        stroke={theme?.colors[variant]?.contrast}
       />
     </StyledSpinner>
   )
@@ -43,12 +42,14 @@ export function withLoading<T extends object>(
     children,
     ...props
   }: WithLoadingProps & T) => {
+    const { theme } = useTheme();
+
     return (
       <WrappedComponent
         {...(props as T)}
         disabled={isLoading || (props as any).disabled}
       >
-        {isLoading ? <>{loadingText} <Spinner variant={variant} /></> : children}
+        {isLoading ? <>{loadingText} <Spinner theme={theme} variant={variant} {...props} /></> : children}
       </WrappedComponent>
     );
   };
