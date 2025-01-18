@@ -4,7 +4,6 @@ export const lightTheme = {
     text: "#000000",
     primary: { main: "#dc3545", contrast: "#fff" },
     secondary: { main: "#6C757D", contrast: "#fff" },
-    // "#6C757D",
     border: "#DDDDDD",
   },
   spacing: (factor: number) => `${factor * 8}px`,
@@ -18,8 +17,8 @@ export const darkTheme = {
   colors: {
     background: "#121212",
     text: "#ffffff",
-    primary: "#1E88E5",
-    secondary: "#8A8A8A",
+    primary: { main: "#1E88E5", contrast: "#fff" },
+    secondary: { main: "#8A8A8A", contrast: "#fff" },
     border: "#333333",
   },
   spacing: (factor: number) => `${factor * 8}px`,
