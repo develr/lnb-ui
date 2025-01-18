@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@adobe/css-tools@^4.0.1", "@adobe/css-tools@^4.4.0":
+"@adobe/css-tools@^4.4.0":
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.4.1.tgz#2447a230bfe072c1659e6815129c03cf170710e3"
   integrity sha512-12WGKBQzjUAI4ayyF4IAtfw2QR/IDoqk6jTddXDhtYTJF9ASmoE1zst7cVtP0aL/F1jUJL5r+JxKXKEgHNbEUQ==
@@ -3751,13 +3751,6 @@ jest-snapshot@^29.7.0:
     pretty-format "^29.7.0"
     semver "^7.5.3"
 
-jest-styled-components@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-7.2.0.tgz#67e768b98d3d58513341a62baca76f3e253a4deb"
-  integrity sha512-gwyyveNjvuRA0pyhbQoydXZllLZESs2VuL5fXCabzh0buHPAOUfANtW7n5YMPmdC0sH3VB7h2eUGZ23+tjvaBA==
-  dependencies:
-    "@adobe/css-tools" "^4.0.1"
-
 jest-util@^29.0.0, jest-util@^29.7.0:
   version "29.7.0"
   resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-29.7.0.tgz#23c2b62bfb22be82b44de98055802ff3710fc0bc"
@@ -4596,6 +4589,13 @@ react-docgen@^7.0.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
 
+react-dom@^19.0.0:
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0.tgz#43446f1f01c65a4cd7f7588083e686a6726cfb57"
+  integrity sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==
+  dependencies:
+    scheduler "^0.25.0"
+
 react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -4788,6 +4788,11 @@ scheduler@^0.23.2:
   integrity sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==
   dependencies:
     loose-envify "^1.1.0"
+
+scheduler@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0.tgz#336cd9768e8cceebf52d3c80e3dcf5de23e7e015"
+  integrity sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==
 
 schema-utils@^3.1.1, schema-utils@^3.2.0:
   version "3.3.0"
